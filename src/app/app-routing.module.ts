@@ -10,7 +10,7 @@ const routes: Routes = [
   {
       path:'',
       pathMatch:"full",
-      component: LandingPageComponent,
+      component: LandingPageComponent
   },
   {
       path:'pokemon-catalogue',
