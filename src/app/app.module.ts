@@ -7,13 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { TrainerPageComponent } from './pages/trainer-page/trainer-page.component';
 import { PokemonCataloguePageComponent } from './pages/pokemon-catalogue-page/pokemon-catalogue-page.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     TrainerPageComponent,
-    PokemonCataloguePageComponent
+    PokemonCataloguePageComponent, 
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
