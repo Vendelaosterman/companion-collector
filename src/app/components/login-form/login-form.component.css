@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+:root{
+    --primary-yellow-color: #ffcb05;
+    --primary-blue-color: #095696;
+}
+
+.loginForm-wr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10rem;
+    gap: 2rem;
+}
+
+h1{
+    font-family: 'Paytone One', sans-serif;
+    color: var(--primary-yellow-color);
+    text-align: center;
+    font-size: 3rem;
+    -webkit-text-stroke: 0.5px #f9e594;
+
+}
+
+form{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    width: 20%;
+    height: 40px;
+}
+
+form img{
+    width: 30px;
+}
+
+input{
+    border: none;
+    font-family: 'Unbounded', cursive;
+}
+
+input:focus{
+    outline: none;
+}
+
+.input-wr{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button{
+    border: none;
+    width: 30%;
+    background-color: var(--primary-yellow-color);
+    color: var(--primary-blue-color);
+    border-radius: 20px;
+    font-family: 'Unbounded', cursive;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: var(--primary-blue-color);
+    color: white;
+}

@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+
+html{
+    height: 100%;
+    background-image: url('./assets/images/7921828.jpg');
+    background-size: cover;
+}
+
+body{
+    margin: 0;
+}
+
+:root{
+    --primary-yellow-color: #ffcd01;
+    --primary-blue-color: #095696;
+    font-family: 'Unbounded', cursive;
+}
