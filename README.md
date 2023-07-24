@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Sign language Images
+Background image and icons made by [Freepik](https://www.freepik.com) from [www.freepik.com] (https://www.freepik.com/)
+
+Pikachu icon made by [Roundicons Freebies](http://www.roundicons.com) from [www.flaticon.com](https://www.flaticon.com/)
