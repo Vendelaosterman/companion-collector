@@ -1,1 +1,3 @@
 <p>pokemon catalogue-page works!</p>
+
+<app-pokemon-list-item *ngFor="let pokemon of pokemons" [pokemon]="pokemon" (pokemonSelected)="handlePokemonSelected($event)"></app-pokemon-list-item>
