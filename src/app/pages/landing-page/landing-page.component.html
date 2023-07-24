@@ -1,7 +1,2 @@
 <p>Landing-page works!</p>
-
-
-<p *ngIf="trainerDetails!=undefined">Current user: {{trainerDetails.results[0].name.title}} {{trainerDetails.results[0].name.first}} {{trainerDetails.results[0].name.last}}</p>
-<img *ngIf="trainerDetails!=undefined" [src]="this.userDetails.results[0].picture.medium"/>
-
-<app-pokemon-list-item *ngFor="let pokemon of pokemons" [pokemon]="pokemon" (pokemonSelected)="handlePokemonSelected($event)"></app-pokemon-list-item>
+<app-login-form></app-login-form>

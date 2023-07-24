@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'companion-collector';
+  isLoggedIn: boolean = false;
+
+  ngOnInit(){
+    this.checkUserLoggedIn();
+  }
+
+  checkUserLoggedIn(){
+    const user = localStorage.getItem('username');
+    this.isLoggedIn = !!user; 
+  }
 }
