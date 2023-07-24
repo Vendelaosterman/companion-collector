@@ -1,18 +1,18 @@
 header{
-    padding-left: 3rem;
+    padding: 1rem 3rem;
 }
 
 .default-header{
-    /*background-color: rgba(255, 255, 255, 0.856);*/
     background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    align-items: center;
 }
 
-header img{
+#pokemon-logo{
     width: 200px;
 }
 
-/*nav{
-    display: none;
-}*/
+#pikachu-logo{
+    width: 50px;
+}

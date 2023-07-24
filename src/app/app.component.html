@@ -1,16 +1,9 @@
 
 <header class="default-header">
-    <img src="../../../assets/images/Pokemon-Logo.png">
-    <nav>
-        <a routerLink="pokemon-catalogue">Pokémon catalogue Page</a>
-        <a routerLink="trainer">Trainer Page</a>
+    <a routerLink="pokemon-catalogue"><img id="pokemon-logo"src="../../../assets/images/Pokemon-Logo.png"></a>
+    <nav *ngIf="isLoggedIn">
+        <a routerLink="trainer"><img src="../../../assets/images/pikachu.png" id="pikachu-logo"></a>
     </nav>
-    <router-outlet></router-outlet>
 </header>
 
-<!--<nav *ngIf="isLoggedIn">
-    <a routerLink="">Landing Page</a>
-    <a routerLink="pokemon-catalogue">Pokémon catalogue Page</a>
-    <a routerLink="trainer">Trainer Page</a>
-</nav>
-    <router-outlet></router-outlet>-->
+<router-outlet></router-outlet>

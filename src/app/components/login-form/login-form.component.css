@@ -23,7 +23,7 @@ h1{
 
 }
 
-form{
+.form{
     background-color: white;
     display: flex;
     justify-content: space-between;
@@ -33,7 +33,7 @@ form{
     height: 40px;
 }
 
-form img{
+.form img{
     width: 30px;
 }
 
