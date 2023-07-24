@@ -18,7 +18,7 @@ export class LoginFormComponent{
 
     login(){
         localStorage.setItem('username',this.userName!)
-        this.router.navigateByUrl("catalogue-page")
+        this.router.navigateByUrl("pokemon-catalogue")
 
     }
 

@@ -1,9 +1,9 @@
 
 <h2>Big daddy component/Header</h2>
 
-<div class="test">
+<nav *ngIf="isLoggedIn">
     <a routerLink="">Landing Page</a>
     <a routerLink="pokemon-catalogue">Pokémon catalogue Page</a>
     <a routerLink="trainer">Trainer Page</a>
+</nav>
     <router-outlet></router-outlet>
-</div>
