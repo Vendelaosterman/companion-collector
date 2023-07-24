@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { NgModel } from "@angular/forms";
 import { Router } from "@angular/router";
+import { UserService } from "src/app/services/user-service.service";
 
 @Component({
     selector:"app-login-form",
@@ -13,10 +14,12 @@ import { Router } from "@angular/router";
 export class LoginFormComponent{
     userName?:string = "not logged"
 
-    constructor(private readonly router:Router){}
+    constructor(private readonly router:Router, 
+        private readonly userService:UserService){}
 
     login(){
         localStorage.setItem('username',this.userName!)
+        this.userService.getUser()
         this.router.navigateByUrl("pokemon-catalogue")
 
     }
