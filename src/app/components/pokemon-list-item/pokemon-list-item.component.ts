@@ -1,23 +1,23 @@
 import { Component, Input,Output, OnInit, EventEmitter } from '@angular/core';
-import { Book } from 'src/app/models/pokemon';
+import { Pokemon } from 'src/app/models/pokemon';
 
 @Component({
-  selector: 'app-book-list-item',
-  templateUrl: './book-list-item.component.html',
-  styleUrls: ['./book-list-item.component.css']
+  selector: 'app-pokemon-list-item',
+  templateUrl: './pokemon-list-item.component.html',
+  styleUrls: ['./pokemon-list-item.component.css']
 })
-export class BookListItemComponent implements OnInit {
+export class PokemonListItemComponent implements OnInit {
 
-  @Input() book?:Book
-  @Output() bookSelected:EventEmitter<number> = new EventEmitter();
+  @Input() pokemon?:Pokemon
+  @Output() pokemonSelected:EventEmitter<number> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  bookClicked():void{
-    this.bookSelected.emit(this.book?.id)
+  pokemonClicked():void{
+    this.pokemonSelected.emit(this.pokemon?.id)
   }
 
 }
