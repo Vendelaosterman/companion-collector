@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { PokemonListItemComponent } from './components/pokemon-list-item/pokemon-list-item.component';
+import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+import { CommonModule} from '@angular/common'
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -15,7 +17,9 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     LandingPageComponent,
     TrainerPageComponent,
     PokemonCataloguePageComponent, 
-    LoginFormComponent
+    LoginFormComponent,
+    PokemonListItemComponent,
+    PokemonListComponent
   ],
   imports: [
     BrowserModule,
