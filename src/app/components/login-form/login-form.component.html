@@ -1,9 +1,9 @@
 <div class="loginForm-wr">
-    <h1>LET'S CATCH SOME <br> POKÈMONS!</h1>
+    <h1>LET'S CATCH SOME <br> POKÈMON!</h1>
 <div class="form">
     <div class="input-wr">
         <img src="../../../assets/images/pokemon.png"/>
-        <input type="text" placeholder="What's your name?" (keydown)="userNameChange($event)" />
+        <input type="text" placeholder="What's your name?" (input)="userNameChange($event)" />
     </div>
 <button (click)="login()">LOGIN</button>
 </div>

@@ -11,6 +11,8 @@ import { filter } from 'rxjs/operators';
 export class AppComponent {
   title = 'companion-collector';
   isLoggedIn: boolean = false;
+  user: string = "";
+  //this.user: string = "";
 
   constructor(private readonly router: Router) {}
 
@@ -21,7 +23,7 @@ export class AppComponent {
   }
 
   checkUserLoggedIn(){
-    const user = localStorage.getItem('username');
-    this.isLoggedIn = !!user; 
+    this.user = localStorage.getItem('username')!;
+    this.isLoggedIn = !!this.user; 
   }
 }

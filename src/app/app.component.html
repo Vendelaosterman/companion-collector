@@ -2,7 +2,10 @@
 <header class="default-header">
     <a routerLink="pokemon-catalogue"><img id="pokemon-logo"src="../../../assets/images/Pokemon-Logo.png"></a>
     <nav *ngIf="isLoggedIn">
-        <a routerLink="trainer"><img src="../../../assets/images/pikachu.png" id="pikachu-logo"></a>
+        <a routerLink="trainer" id="pikachu-wr">
+            <img src="../../../assets/images/pikachu.png" id="pikachu-logo">
+            <p>{{user}}</p>
+        </a>
     </nav>
 </header>
 

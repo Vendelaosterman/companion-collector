@@ -1,5 +1,5 @@
 header{
-    padding: 1rem 3rem;
+    padding: 1rem 7rem;
 }
 
 .default-header{
@@ -15,4 +15,25 @@ header{
 
 #pikachu-logo{
     width: 50px;
+}
+
+#pikachu-wr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#pikachu-wr p{
+    margin: 0;
+    font-size: small;
+}
+
+#pikachu-wr{
+    text-decoration: none;
+}
+
+.default-header a:visited, .default-header a:active .default-header a:link .default-header a:hover {
+    color: white;
+    text-decoration: none!important;
 }

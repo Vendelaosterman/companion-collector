@@ -18,14 +18,16 @@ export class LoginFormComponent{
         private readonly userService:UserService){}
 
     login(){
+
         localStorage.setItem('username',this.userName!)
-        this.userService.getUser()
+        this.userService.getUsers()
         this.router.navigateByUrl("pokemon-catalogue")
 
     }
 
     userNameChange(event:any):void{
         this.userName = event.target.value
+        console.log(event.target.value);
     }
 
 }
