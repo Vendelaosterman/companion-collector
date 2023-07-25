@@ -20,7 +20,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     PokemonCataloguePageComponent, 
     LoginFormComponent,
     PokemonListItemComponent,
-    PokemonListComponent
+    PokemonListComponent,
   ],
   imports: [
     BrowserModule,
