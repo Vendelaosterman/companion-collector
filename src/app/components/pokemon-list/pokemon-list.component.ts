@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Pokemon } from 'src/app/models/pokemon';
 import { PokemonService } from 'src/app/services/pokemon-service.service';
@@ -12,7 +12,7 @@ import { User2 } from 'src/app/models/user';
 })
 export class PokemonListComponent implements OnInit {
 
-  public pokemons:Pokemon[] = []
+  @Input() pokemons:Pokemon[] = []
 
   constructor(private readonly router:Router, private readonly pokemonService:PokemonService, private readonly userService:UserService) { }
 

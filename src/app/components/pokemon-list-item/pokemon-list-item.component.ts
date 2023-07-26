@@ -9,12 +9,18 @@ import { Pokemon } from 'src/app/models/pokemon';
 export class PokemonListItemComponent implements OnInit {
 
   @Input() pokemon?:Pokemon
-  @Output() pokemonSelected:EventEmitter<number> = new EventEmitter();
+  @Output() collectItem:EventEmitter<number> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  onPokemonClicked(): void {
+    this.collectItem.emit(this.pokemon?.id);
+  }
+
+  
 
   /*pokemonClicked():void{
     this.pokemonSelected.emit(this.pokemon?.id)
