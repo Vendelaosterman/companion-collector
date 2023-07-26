@@ -1,16 +1,16 @@
 
-
-
 <div class="pokemon-container">
   <div *ngFor="let pokemon of pokemons" class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        <img [src]="pokemon?.sprites" alt="image not available" class="pokemon-image">
+        <img [src]="pokemon?.sprites?.front_default" alt="image not available" class="pokemon-image">
       </div>
       <div class="flip-card-back">
+        <img [src]="pokemon?.sprites?.back_default" alt="image not available" class="pokemon-image">
         <h1>{{ pokemon?.name }}</h1>
-        <p>information about the Pokemon</p>
+        <h1>{{ pokemon.types[0].type.name}}</h1>
       </div>
     </div>
+    <button (click)="collectItem(pokemon?.id)">Collect</button>
   </div>
 </div>

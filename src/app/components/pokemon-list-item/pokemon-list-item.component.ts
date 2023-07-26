@@ -16,8 +16,8 @@ export class PokemonListItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  pokemonClicked():void{
+  /*pokemonClicked():void{
     this.pokemonSelected.emit(this.pokemon?.id)
-  }
+  }*/
 
 }

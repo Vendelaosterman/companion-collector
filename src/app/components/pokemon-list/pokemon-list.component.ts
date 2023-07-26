@@ -20,6 +20,8 @@ export class PokemonListComponent implements OnInit {
       .subscribe({ 
         next: (pokemons)=>{
           this.pokemons = pokemons
+
+          console.log(this.pokemons[0].id);
       },
       error:(error => {
         console.log(error)
@@ -28,27 +30,29 @@ export class PokemonListComponent implements OnInit {
     
     );
   }
-  
-  // get userDetails(): User{
-  //   return this.userService.userDetails
-  // }
 
+  collectItem(id : number | undefined){
+    let currentPokemons = localStorage.getItem("trainer");
+    console.log(currentPokemons);
+    console.log(id)
+  }
 
-  /*
-  async getSpriteUrl(pokemonId: number | undefined): Promise<string> {
-    if (pokemonId === undefined) {
-      // Return a default image URL or an appropriate fallback URL
-      return 'path_to_default_image.png';
-    }
-  
-    try {
-      // Fetch the Pokemon data to get the sprite URL
-      const pokemonData = await this.pokemonService.getPokemonById(pokemonId).toPromise();
-      return pokemonData?.sprites?.front_default || 'path_to_default_image.png';
-    } catch (error) {
-      console.log('Error fetching sprite URL:', error);
-      return 'path_to_default_image.png'; // Return a default image URL in case of an error
-    }
-  }*/
+  /*this.userService.getUsers(this.userName).subscribe((user) => {
+            if (!user) {
+              // User does not exist, create a new user and save it to API and localStorage
+              this.userService.postUser({
+                id: 0,
+                username: this.userName!,
+                pokemon: [],
+              }).subscribe((createdUser) => {
+                localStorage.setItem("trainer", JSON.stringify(createdUser));
+                this.router.navigateByUrl("pokemon-catalogue");
+              });
+            } else {
+              // User exists, save it in localStorage
+              localStorage.setItem("trainer", JSON.stringify(user));
+              this.router.navigateByUrl("pokemon-catalogue");
+            }
+        });*/
   
 }

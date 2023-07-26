@@ -30,32 +30,6 @@ export class UserService {
         );
       }
 
-    /*getUsers(username : string = ""){
-       this.http.get<User2[]>(environment.API_URL)
-        .subscribe({
-            next: users => {
-
-                this._users = users;
-                //this._newUsername = localStorage.getItem("username")!
-                //console.log(username);
-                const existingUser = users.find((user) => user.username === username);
-
-                this._user = existingUser;
-
-                if (!existingUser) {
-                    this.postUser();
-                }else{
-                    //localStorage.setItem("trainer", JSON.stringify(existingUser));
-                } 
-                
-            },
-            error: error =>{
-                console.log(error)
-            }
-        })
-
-    }*/
-
     returnUser(){
         return this._user;
     }
@@ -70,23 +44,8 @@ export class UserService {
         return this.http.post<User2>(environment.API_URL, newUser, {headers});
       }
 
-    // add new user 
-    /*postUser(){
+    /*postPokemon(newPokemon: User2): Observable <User2>{
 
-        const newUser = {
-            id: this._users.length + 1,
-            username: this._newUsername,
-            pokemon: []
-        };
+    }  */
 
-        const headers = new HttpHeaders({
-            'Content-Type': 'application/json',
-            'x-api-key': environment.API_KEY,
-          });
-
-        this.http.post(environment.API_URL, newUser, {headers})
-        .subscribe(() => {  
-            localStorage.setItem("trainer", JSON.stringify(newUser));
-        })
-    }*/
 }
