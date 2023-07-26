@@ -14,10 +14,11 @@ export class AuthGuard {
 
     if (localStorage.getItem('trainer') !== null) {
       return true;
+      
     } else {
       // Redirect to the login page  when the user is not logged in
       return false;
-      
+    
     }
   }
 }

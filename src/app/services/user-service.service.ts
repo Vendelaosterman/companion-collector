@@ -44,8 +44,21 @@ export class UserService {
         return this.http.post<User2>(environment.API_URL, newUser, {headers});
       }
 
-    /*postPokemon(newPokemon: User2): Observable <User2>{
+    postPokemon(userId: number, currentPokemon: string[], newPokemon: string): Observable <User2>{
 
-    }  */
+      console.log(currentPokemon)
+
+      const headers = new HttpHeaders({
+        'Content-Type': 'application/json',
+        'x-api-key': environment.API_KEY,
+      });
+
+      const updatedUser: Partial <User2> = {
+        pokemon: [...currentPokemon, newPokemon] // Add the newPokemon to the existing list
+      };
+    
+      return this.http.patch<User2>(`${environment.API_URL}/${userId}`, updatedUser, { headers });
+
+    } 
 
 }
