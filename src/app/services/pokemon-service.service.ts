@@ -35,12 +35,4 @@ export class PokemonService {
   getPokemonById(id: number): Observable<Pokemon> {
     return this.http.get<Pokemon>(`https://pokeapi.co/api/v2/pokemon/${id}`);
   }
-
-  updatePokemon(pokemon: Pokemon) {
-    this.http.put(`http://localhost:3000/pokemon-catalogue/${pokemon.id}`, pokemon)
-      .subscribe({
-        next: response => console.log(response),
-        error: error => console.log(error)
-      });
-  }
 }

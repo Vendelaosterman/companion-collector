@@ -29,13 +29,26 @@ export class PokemonListComponent implements OnInit {
     );
   }
   
-
   // get userDetails(): User{
   //   return this.userService.userDetails
   // }
 
-  handlePokemonSelected(pokemonId:number){
-    this.router.navigate(['pokemon-details',pokemonId])
-  }
 
+  /*
+  async getSpriteUrl(pokemonId: number | undefined): Promise<string> {
+    if (pokemonId === undefined) {
+      // Return a default image URL or an appropriate fallback URL
+      return 'path_to_default_image.png';
+    }
+  
+    try {
+      // Fetch the Pokemon data to get the sprite URL
+      const pokemonData = await this.pokemonService.getPokemonById(pokemonId).toPromise();
+      return pokemonData?.sprites?.front_default || 'path_to_default_image.png';
+    } catch (error) {
+      console.log('Error fetching sprite URL:', error);
+      return 'path_to_default_image.png'; // Return a default image URL in case of an error
+    }
+  }*/
+  
 }
