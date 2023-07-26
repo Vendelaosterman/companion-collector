@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { TrainerPageComponent } from './pages/trainer-page/trainer-page.component';
+import { TrainerListComponent } from './components/trainer/trainer-list.component';
 import { PokemonCataloguePageComponent } from './pages/pokemon-catalogue-page/pokemon-catalogue-page.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 
@@ -21,6 +22,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     LoginFormComponent,
     PokemonListItemComponent,
     PokemonListComponent,
+    TrainerListComponent
   ],
   imports: [
     BrowserModule,

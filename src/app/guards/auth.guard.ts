@@ -12,7 +12,7 @@ export class AuthGuard {
     state: RouterStateSnapshot
   ): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree => {
 
-    if (localStorage.getItem('username') !== null) {
+    if (localStorage.getItem('trainer') !== null) {
       return true;
     } else {
       // Redirect to the login page  when the user is not logged in

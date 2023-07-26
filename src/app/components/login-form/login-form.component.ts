@@ -12,22 +12,45 @@ import { UserService } from "src/app/services/user-service.service";
 
 )
 export class LoginFormComponent{
-    userName?:string = "not logged"
+    userName?:string = "" 
 
     constructor(private readonly router:Router, 
         private readonly userService:UserService){}
 
     login(){
 
-        localStorage.setItem('username',this.userName!)
-        this.userService.getUsers()
-        this.router.navigateByUrl("pokemon-catalogue")
+        this.userService.getUsers(this.userName).subscribe((user) => {
+            if (!user) {
+              // User does not exist, create a new user and save it to API and localStorage
+              this.userService.postUser({
+                id: 0,
+                username: this.userName!,
+                pokemon: [],
+              }).subscribe((createdUser) => {
+                localStorage.setItem("trainer", JSON.stringify(createdUser));
+                this.router.navigateByUrl("pokemon-catalogue");
+              });
+            } else {
+              // User exists, save it in localStorage
+              localStorage.setItem("trainer", JSON.stringify(user));
+              this.router.navigateByUrl("pokemon-catalogue");
+            }
+        });
+        
+      
+
+        //localStorage.setItem('username',this.userName!)
+    
+        //this.userService.getUsers(this.userName)
+        //this.userService.getUsers(this.userName)
+        
+        //localStorage.setItem('trainer', this.userService.returnUser())
+        //this.router.navigateByUrl("pokemon-catalogue")
 
     }
 
     userNameChange(event:any):void{
         this.userName = event.target.value
-        console.log(event.target.value);
     }
 
 }

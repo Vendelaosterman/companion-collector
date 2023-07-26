@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from "@angular/router";
 import { filter } from 'rxjs/operators';
+import { User2 } from './models/user';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ export class AppComponent {
   title = 'companion-collector';
   isLoggedIn: boolean = false;
   user: string = "";
-  //this.user: string = "";
+  username: string = "";
 
   constructor(private readonly router: Router) {}
 
@@ -23,7 +24,8 @@ export class AppComponent {
   }
 
   checkUserLoggedIn(){
-    this.user = localStorage.getItem('username')!;
-    this.isLoggedIn = !!this.user; 
+    const userData = JSON.parse(localStorage.getItem("trainer")!) as User2 ;
+    this.user = userData.username
+    this.isLoggedIn = !!this.user;
   }
 }

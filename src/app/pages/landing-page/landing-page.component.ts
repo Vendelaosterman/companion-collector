@@ -11,7 +11,7 @@ export class LandingPageComponent implements OnInit {
   constructor(private readonly router:Router){}
 
   ngOnInit(): void {
-    if(localStorage.getItem("username") !== null){
+    if(localStorage.getItem("trainer") !== null){
       this.router.navigateByUrl("pokemon-catalogue")
     }
   }
