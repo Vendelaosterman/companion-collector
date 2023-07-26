@@ -18,10 +18,8 @@
 export interface Pokemon {
   id: number
   name: string
-  order: number
   sprites: Sprites
   types: Type[]
-  weight: number
 }
 
 export interface Sprites {
