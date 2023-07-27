@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Pokemon } from 'src/app/models/pokemon';
 import { PokemonService } from 'src/app/services/pokemon-service.service';
 import { UserService } from 'src/app/services/user-service.service';
+import { Location } from '@angular/common';
 import { User } from 'src/app/models/user';
 import { forkJoin } from 'rxjs';
 
@@ -15,7 +16,7 @@ export class TrainerListComponent implements OnInit {
 
   pokemons? : Pokemon [] = []
 
-  constructor(private readonly router: Router, private readonly userService: UserService, private readonly pokemonService: PokemonService) { }
+  constructor(private readonly router: Router, private readonly userService: UserService, private readonly location:Location) { }
 
   ngOnInit(): void {
 
@@ -32,7 +33,18 @@ export class TrainerListComponent implements OnInit {
 
   }
 
-  deleteItem(id : number | undefined){
-    console.log("id", id)
+  handleRemoveClicked(pokemonid: number | undefined){
+    let userDetails = JSON.parse(localStorage.getItem("trainer")!)
+
+    if(pokemonid){
+      let pokemonToInt = pokemonid.toString()
+
+      this.userService.removePokemon(userDetails.id, userDetails.pokemon, pokemonToInt).subscribe(
+        (updatedUser => {
+          localStorage.setItem("trainer", JSON.stringify(updatedUser));
+          location.reload()
+        })
+      )
+    }
   }
 }

@@ -3,7 +3,7 @@
     <app-pokemon-list-item [pokemon]="pokemon">
     </app-pokemon-list-item>
     <div class="btn-wr">
-      <button (click)="deleteItem(pokemon?.id)">Remove</button>
+      <button (click)="handleRemoveClicked(pokemon?.id)">Remove</button>
     </div>
     </div>
   </div>
