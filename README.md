@@ -35,7 +35,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## API Keys
 
-API-Key: 02rVn0QJJ59GUQyU2mMatCMp7Jb7qoUmqZbzTeQrG79VvO9lamBg8Adp
+API-Key: 02rVn0QJJ59GUQyU2mMatCMp7Jb7qoUmqZbzTeQrG79VvO9lamBg8Adp \
 API-URL: https://sign-language-translator-api-production.up.railway.app/trainers
 
 ## Sign language Images
@@ -44,7 +44,7 @@ Background image and icons made by [Freepik](https://www.freepik.com) from [www.
 
 Pikachu icon made by [Roundicons Freebies](http://www.roundicons.com) from [www.flaticon.com](https://www.flaticon.com/)
 
-##Authors
+## Authors
 
-Vendela Österman
+Vendela Österman \
 Emma Hogstrand
