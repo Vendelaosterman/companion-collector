@@ -25,6 +25,7 @@ export class UserService {
         return this.http.get<User2[]>(environment.API_URL).pipe(
           map((users: User2[]) => {
             const existingUser = users.find((user: User2) => user.username === username);
+            this._users = users
             return existingUser || null;
           })
         );
@@ -46,8 +47,6 @@ export class UserService {
 
     postPokemon(userId: number, currentPokemon: string[], newPokemon: string): Observable <User2>{
 
-      console.log(currentPokemon)
-
       const headers = new HttpHeaders({
         'Content-Type': 'application/json',
         'x-api-key': environment.API_KEY,
@@ -61,4 +60,21 @@ export class UserService {
 
     } 
 
+    removePokemon(userId: number, currentPokemon: string[], removedPokemon: number): Observable <User2>{
+
+      const headers = new HttpHeaders({
+        'Content-Type': 'application/json',
+        'x-api-key': environment.API_KEY,
+      });
+
+      console.log(currentPokemon);
+      console.log(removedPokemon)
+
+      const updatedUser: Partial <User2> = {
+        pokemon: [...currentPokemon, newPokemon] // Add the newPokemon to the existing list
+      };
+    
+      return this.http.patch<User2>(`${environment.API_URL}/${userId}`, updatedUser, { headers });
+
+    } 
 }
