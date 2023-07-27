@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Pokemon } from 'src/app/models/pokemon';
-import { PokemonService } from 'src/app/services/pokemon-service.service';
 import { UserService } from 'src/app/services/user-service.service';
 import { Location } from '@angular/common';
-import { User } from 'src/app/models/user';
-import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-trainer-list',
