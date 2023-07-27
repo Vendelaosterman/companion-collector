@@ -25,7 +25,7 @@ export class AppComponent {
 
   checkUserLoggedIn(){
     const userData = JSON.parse(localStorage.getItem("trainer")!) as User2 ;
-    this.user = userData.username
+    this.user = userData?.username
     this.isLoggedIn = !!this.user;
   }
 }

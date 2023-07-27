@@ -1,9 +1,13 @@
-<div class="pokemon-container">
-    <div *ngFor="let pokemon of pokemons">
+<div class="pokemon-container">        
+    <button class="logout-btn" (click)="handleLogoutClick()">LOGOUT</button>
+
+    <div *ngFor="let pokemon of pokemons">    
     <app-pokemon-list-item [pokemon]="pokemon">
     </app-pokemon-list-item>
     <div class="btn-wr">
       <button (click)="deleteItem(pokemon?.id)">Remove</button>
-    </div>
-    </div>
+    </div>      
+
+    </div>    
+
   </div>
