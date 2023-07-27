@@ -38,7 +38,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 API-Key: 02rVn0QJJ59GUQyU2mMatCMp7Jb7qoUmqZbzTeQrG79VvO9lamBg8Adp \
 API-URL: https://sign-language-translator-api-production.up.railway.app/trainers
 
-## Sign language Images
+## Images
 
 Background image and icons made by [Freepik](https://www.freepik.com) from [www.freepik.com] (https://www.freepik.com/)
 
