@@ -6,3 +6,26 @@
   width: 60%;
   margin: auto;
 }
+
+.btn-wr{
+  text-align: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.btn-wr button{
+  width: 80%;
+  height: 40px;
+  border-radius: 20px;
+  font-family: 'Unbounded', cursive;
+  background-color: #00285c;
+  border: 2px solid white;
+  color: white;
+  margin-bottom: 5rem;
+}
+
+.btn-wr button:hover{
+  background-color: white;
+  border: 2px solid white;
+  color: #00285c;
+}

@@ -13,18 +13,26 @@ import { forkJoin } from 'rxjs';
 })
 export class TrainerListComponent implements OnInit {
 
-  constructor(private readonly router:Router, private readonly userService:UserService, private readonly pokemonService:PokemonService) { }
+  pokemons? : Pokemon [] = []
+
+  constructor(private readonly router: Router, private readonly userService: UserService, private readonly pokemonService: PokemonService) { }
 
   ngOnInit(): void {
 
     let allPokemons = JSON.parse(sessionStorage.getItem("pokemons")!) as Pokemon[]
     let caughtPokemons = JSON.parse(localStorage.getItem("trainer")!)
 
-    caughtPokemons.pokemon.map((caught : string) => {
+    caughtPokemons.pokemon.map((caught: string) => {
       let caughtToInt = parseInt(caught)
       const foundPokemon = allPokemons.find((pokemon: Pokemon) => pokemon.id === caughtToInt);
-      console.log(foundPokemon)
+      if(foundPokemon){
+        this.pokemons?.push(foundPokemon);
+      }
     })
 
-}
+  }
+
+  deleteItem(id : number | undefined){
+    console.log("id", id)
+  }
 }
