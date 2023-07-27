@@ -14,7 +14,7 @@ export class PokemonService {
   // ta in 40 st pokemon, gör en switch map på varje så den hämtar varje: 
 
   getPokemons(): Observable<Pokemon[]> {
-    const limit = 40;
+    const limit = 80;
     const offset = 80;
 
     const url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;

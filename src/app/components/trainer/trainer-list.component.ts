@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Pokemon } from 'src/app/models/pokemon';
 import { UserService } from 'src/app/services/user-service.service';
 import { Location } from '@angular/common';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-trainer-list',
@@ -28,6 +29,12 @@ export class TrainerListComponent implements OnInit {
       }
     })
 
+  }
+
+  checkPokemonLength(){
+    let caughtPokemons = JSON.parse(localStorage.getItem("trainer")!)
+    console.log(caughtPokemons.pokemon.length)
+    return caughtPokemons.pokemon.length > 0;
   }
   
   
