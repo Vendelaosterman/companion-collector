@@ -1,6 +1,13 @@
-# CompanionCollector
+# Assignment 3: CompanionCollector
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+We learned Angular from the (shelf-help) context lectures and applied what we learned to this CompanionCollector project. We started with the design of the component tree which is attached inside the companion-collector folder. 
+
+## Installation
+
+To be able to execute npm commands make sure that you have node.JS installed. Then make sure that you have installed Angular CLI globally on your device. If you have not, run: 
+    - npm install -g @angular/cli
+After this is made sure of, run "npm start" in the terminal to run the project. 
 
 ## Development server
 
@@ -26,7 +33,18 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+## API Keys
+
+API-Key: 02rVn0QJJ59GUQyU2mMatCMp7Jb7qoUmqZbzTeQrG79VvO9lamBg8Adp
+API-URL: https://sign-language-translator-api-production.up.railway.app/trainers
+
 ## Sign language Images
+
 Background image and icons made by [Freepik](https://www.freepik.com) from [www.freepik.com] (https://www.freepik.com/)
 
 Pikachu icon made by [Roundicons Freebies](http://www.roundicons.com) from [www.flaticon.com](https://www.flaticon.com/)
+
+##Authors
+
+Vendela Österman
+Emma Hogstrand
