@@ -46,16 +46,16 @@ export class TrainerListComponent implements OnInit {
   }
 
   handleRemoveClicked(pokemonid: number | undefined){
-    let userDetails = JSON.parse(localStorage.getItem("trainer")!)
 
+    let userDetails = JSON.parse(localStorage.getItem("trainer")!)
     if(pokemonid){
       let pokemonToInt = pokemonid.toString()
-
       this.userService.removePokemon(userDetails.id, userDetails.pokemon, pokemonToInt).subscribe(
         (updatedUser => {
           localStorage.setItem("trainer", JSON.stringify(updatedUser));
           location.reload()
         })
+
       )
     }
   }
