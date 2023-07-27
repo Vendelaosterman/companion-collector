@@ -36,16 +36,6 @@ export class LoginFormComponent{
               this.router.navigateByUrl("pokemon-catalogue");
             }
         });
-        
-      
-
-        //localStorage.setItem('username',this.userName!)
-    
-        //this.userService.getUsers(this.userName)
-        //this.userService.getUsers(this.userName)
-        
-        //localStorage.setItem('trainer', this.userService.returnUser())
-        //this.router.navigateByUrl("pokemon-catalogue")
 
     }
 

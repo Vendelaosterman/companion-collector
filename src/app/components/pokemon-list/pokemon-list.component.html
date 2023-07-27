@@ -2,8 +2,11 @@
   <div *ngFor="let pokemon of pokemons">
   <app-pokemon-list-item [pokemon]="pokemon">
   </app-pokemon-list-item>
-  <div class="btn-wr">
-    <button (click)="collectItem(pokemon.id)">Collect</button>
+  <div class="btn-wr" *ngIf="!checkAlreadyCollected(pokemon.id)">
+    <button (click)="collectItem(pokemon.id)" id="collectBtn">Collect</button>
+  </div>
+  <div class="btn-wr" *ngIf="checkAlreadyCollected(pokemon.id)">
+    <button id="collectedBtn">Collected</button>
   </div>
   </div>
 </div>

@@ -44,6 +44,15 @@ export class PokemonListComponent implements OnInit {
     }
   }
 
+  checkAlreadyCollected(pokemonid: number){
+    let collectedIds = JSON.parse(localStorage.getItem("trainer")!);
+
+    return collectedIds.pokemon.some((caught: string) => {
+      let caughtToInt = parseInt(caught);
+      return caughtToInt === pokemonid;
+    });
+  }
+
   collectItem(id : number | undefined){
     const userData = JSON.parse(localStorage.getItem("trainer")!) as User2 ;  
     const pokeid = JSON.stringify(id);
