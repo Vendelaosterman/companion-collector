@@ -61,7 +61,7 @@ export class UserService {
 
     } 
 
-    /*removePokemon(userId: number, currentPokemon: string[], removedPokemon: number): Observable <User2>{
+    removePokemon(userId: number, currentPokemon: string[], removedPokemon: string): Observable <User2>{
 
       const headers = new HttpHeaders({
         'Content-Type': 'application/json',
@@ -77,5 +77,5 @@ export class UserService {
     
       return this.http.patch<User2>(`${environment.API_URL}/${userId}`, updatedUser, { headers });
 
-    } */
+    } 
 }
