@@ -29,6 +29,14 @@ export class TrainerListComponent implements OnInit {
     })
 
   }
+  
+  
+  handleLogoutClick(): void {
+    if (window.confirm('Do you really want to log out?')) {
+      localStorage.removeItem('trainer'); // Remove the 'trainer' item from localStorage
+      this.router.navigateByUrl(''); // Redirects the user to the login page
+    }
+  }
 
   handleRemoveClicked(pokemonid: number | undefined){
     let userDetails = JSON.parse(localStorage.getItem("trainer")!)

@@ -29,3 +29,17 @@
     border: 2px solid white;
     color: #00285c;
   }
+
+  .logout-btn{
+    width: 12%;
+    height: 40px;
+    border-radius: 20px;
+    font-family: 'Unbounded', cursive;
+    font-size: 60%;
+    background-color: #bb2c2c;
+    border: 2px solid white;
+    color: white;
+    margin-bottom: -101rem;
+    margin-left: 960px;
+    margin-top: -140px;
+  }

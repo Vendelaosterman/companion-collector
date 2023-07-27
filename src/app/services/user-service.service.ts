@@ -4,6 +4,7 @@ import {User2} from '../models/user';
 import { environment } from '../environments/environment.prod'
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators'; // Import the map operator
+import { Router } from "@angular/router";
 
 @Injectable({
     providedIn: "root"
@@ -15,7 +16,7 @@ export class UserService {
     private _newUsername: string = "" 
     private _user!: User2 | undefined
 
-    constructor(private readonly http:HttpClient) {
+    constructor(private readonly http:HttpClient, private readonly router: Router) {
 
     }
 
@@ -67,10 +68,14 @@ export class UserService {
         'x-api-key': environment.API_KEY,
       });
 
-      let updatedPokemons: Partial <User2> = {
-        pokemon: currentPokemon.filter((item) => item !== removedPokemon)
-        
-      }
-      return this.http.patch<User2>(`${environment.API_URL}/${userId}`, updatedPokemons, { headers });
+      console.log(currentPokemon);
+      console.log(removedPokemon)
+
+      const updatedUser: Partial <User2> = {
+        pokemon: [...currentPokemon, newPokemon] // Add the newPokemon to the existing list
+      };
+    
+      return this.http.patch<User2>(`${environment.API_URL}/${userId}`, updatedUser, { headers });
+
     } 
 }
