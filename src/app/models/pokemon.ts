@@ -1,20 +1,3 @@
-/*export interface Pokemon {
-  id: number;
-  name: string;
-  sprites: {
-    front_default: string;
-    back_default: string;
-    // Add other sprite URLs as needed
-  };
-  types: [
-    slot: number;
-    type: {
-      name: string; 
-    ]
-
-  }
-}*/
-
 export interface Pokemon {
   id: number
   name: string
@@ -31,8 +14,6 @@ export interface Sprites {
   front_female: any
   front_shiny: string
   front_shiny_female: any
-  //other: Other
-  //versions: Versions
 }
 
 export interface Type {

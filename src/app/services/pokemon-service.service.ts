@@ -9,9 +9,7 @@ import {map, switchMap} from 'rxjs/operators';
 })
 export class PokemonService {
 
-  constructor(private readonly http: HttpClient) { }
-
-  // ta in 40 st pokemon, gör en switch map på varje så den hämtar varje: 
+  constructor(private readonly http: HttpClient) { } 
 
   getPokemons(): Observable<Pokemon[]> {
     const limit = 80;

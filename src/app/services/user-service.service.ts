@@ -13,7 +13,6 @@ import { Router } from "@angular/router";
 export class UserService {
 
     private _users! : User2[]
-    private _newUsername: string = "" 
     private _user!: User2 | undefined
 
     constructor(private readonly http:HttpClient, private readonly router: Router) {
