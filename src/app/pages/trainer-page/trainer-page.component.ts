@@ -19,11 +19,18 @@ export class TrainerPageComponent {
     }
   }
   
-    handleLogoutClick(): void {
-      if (window.confirm('Do you really want to log out?')) {
-        localStorage.removeItem('trainer'); // Remove the 'trainer' item from localStorage
-        this.router.navigateByUrl(''); // Redirects the user to the login page
-      }
+  checkPokemonLength(): boolean{
+    let caughtPokemons = JSON.parse(localStorage.getItem("trainer")!)
+    console.log(caughtPokemons.pokemon.length)
+    return caughtPokemons.pokemon.length > 0;
+  }
+  
+  
+  handleLogoutClick(): void {
+    if (window.confirm('Do you really want to log out?')) {
+      localStorage.removeItem('trainer'); // Remove the 'trainer' item from localStorage
+      this.router.navigateByUrl(''); // Redirects the user to the login page
     }
+  }
 }
 

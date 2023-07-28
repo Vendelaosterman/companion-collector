@@ -19,9 +19,9 @@
     height: 40px;
     border-radius: 20px;
     font-family: 'Unbounded', cursive;
-    background-color: #00285c;
-    border: 2px solid white;
-    color: white;
+    background-color: #ffb000;
+    border: 1px solid #00285c;
+    color: #00285c;
     margin-bottom: 5rem;
   }
   
@@ -29,32 +29,4 @@
     background-color: white;
     border: 2px solid white;
     color: #00285c;
-  }
-
-  .logout-btn-wr{
-    text-align: center;
-    margin-top: 3rem;
-  }
-
-  .logout-btn{
-    width: 100px;
-    height: 40px;
-    
-    border-radius: 20px;
-    font-family: 'Unbounded', cursive;
-    font-size: 60%;
-    background-color: #bb2c2c;
-    border: 2px solid white;
-    color: white;
-    margin: auto;
-    margin-right: -70rem;
-  }
-
-  .top-page-wr{
-    color: white;
-    text-align: center;
-    border-bottom: 0.5px solid gray;
-    width: 60%;
-    margin: auto;
-    margin-top: 7rem;
   }

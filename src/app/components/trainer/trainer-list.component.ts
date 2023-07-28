@@ -31,20 +31,6 @@ export class TrainerListComponent implements OnInit {
 
   }
 
-  checkPokemonLength(){
-    let caughtPokemons = JSON.parse(localStorage.getItem("trainer")!)
-    console.log(caughtPokemons.pokemon.length)
-    return caughtPokemons.pokemon.length > 0;
-  }
-  
-  
-  handleLogoutClick(): void {
-    if (window.confirm('Do you really want to log out?')) {
-      localStorage.removeItem('trainer'); // Remove the 'trainer' item from localStorage
-      this.router.navigateByUrl(''); // Redirects the user to the login page
-    }
-  }
-
   handleRemoveClicked(pokemonid: number | undefined){
 
     let userDetails = JSON.parse(localStorage.getItem("trainer")!)

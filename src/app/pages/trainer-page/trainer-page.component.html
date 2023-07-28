@@ -1,1 +1,14 @@
+<div class="top-page-wr">
+    <div class="border-wr" *ngIf="checkPokemonLength()">
+        <h1>Your collected Pokémon</h1>
+    </div>
+    <div class="border-wr" *ngIf="!checkPokemonLength()">
+        <h1>You have not collected any Pokémon</h1>
+    </div>
+    
+        <button class="logout-btn" (click)="handleLogoutClick()">LOGOUT</button>
+    
+</div>
+    
+
 <app-trainer-list></app-trainer-list>

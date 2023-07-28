@@ -32,14 +32,14 @@
 }
 
 #collectBtn{
-  background-color: #00285c;
-  border: 2px solid white;
-  color: white;
+  background-color: #ffb000;
+  border: 1px solid #00285c;
+  color: #00285c;
 }
 
 #collectedBtn{
   background-color: gray;
-  border: 2px solid white;
+  border: 1px solid white;
   color: white;
 }
 

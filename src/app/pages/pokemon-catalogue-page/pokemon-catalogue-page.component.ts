@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-pokemon-catalogue-page',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokemonCataloguePageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
+    this.renderer.removeClass(document.body, 'login-bg')
   }
 
 }
