@@ -1,6 +1,6 @@
 /*  AuthGuard 
-*   The auth.guard is responsible for preventing unauthenticated users from accessing the pokemon catalogue and the trainers 
-    profiles. If a user is not logged in and tries to access the pokemon catalogue they will be redirected to the login page.  
+*   The auth.guard is responsible for preventing unauthenticated users from accessing the pokemon catalogue or the trainer page and the trainers 
+    profiles. If a user is not logged in and tries to access the pokemon catalogue or trainer page they will be redirected to the login page.  
 */  
 
 

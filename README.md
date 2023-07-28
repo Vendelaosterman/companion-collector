@@ -1,7 +1,9 @@
 # Assignment 3: CompanionCollector
 
+The Companion Collector App is a web application that allows users to collect and manage their favorite Pokémon companions. Users can catch various Pokémon, view them in their profile, delete collected Pokémon, and log out.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
-We learned Angular from the (shelf-help) context lectures and applied what we learned to this CompanionCollector project. We started with the design of the component tree which is attached inside the companion-collector folder. 
+We learned Angular from the (shelf-help) lectures and applied what we learned to this CompanionCollector project. We started with the design of the component tree which is attached inside the companion-collector folder. 
 
 ## Installation
 
@@ -46,5 +48,5 @@ Pikachu icon made by [Roundicons Freebies](http://www.roundicons.com) from [www.
 
 ## Authors
 
-Vendela Österman \
-Emma Hogstrand
+@VendelaOsterman  
+@emmahogstrand 

@@ -1,7 +1,6 @@
 /*  Pokemon-list
 *   The pokemon-list is responsible for handling a list of pokemon, checking if a specific pokemon has already been collected 
-    by the user. It provides the functionality to collect new Pokemon and to update the user's data in localStorage and 
-    the pokeAPI. 
+    by the user. It provides the functionality to collect new Pokemon and to update the user's data in localStorage.
 */
 
 import { Component, OnInit, Input } from '@angular/core';
