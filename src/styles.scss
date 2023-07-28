@@ -3,12 +3,16 @@
 
 html{
     height: 100%;
+}
+
+.login-bg{
     background-image: url('./assets/images/7921828.jpg');
     background-size: cover;
 }
 
 body{
     margin: 0;
+    background-color: #095696;
 }
 
 :root{
