@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivateFn, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { Injectable, inject } from '@angular/core';
+import { ActivatedRouteSnapshot, CanActivateFn, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -7,6 +7,9 @@ import { Observable } from 'rxjs';
 })
 
 export class AuthGuard {
+
+  constructor(private router: Router) {}
+
   canActivate: CanActivateFn = (
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
@@ -17,6 +20,7 @@ export class AuthGuard {
       
     } else {
       // Redirect to the login page  when the user is not logged in
+      this.router.navigate(['login']);
       return false;
     
     }
