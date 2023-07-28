@@ -1,3 +1,8 @@
+/*  Pokemon-Catalogue-page   
+*   The pokemon-catalogue-page is responsible for displaying the pokemon catalogue page, ie the page where all the 
+    pokemon available are visible. 
+*/  
+
 import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({

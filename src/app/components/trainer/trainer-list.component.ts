@@ -1,3 +1,9 @@
+/*  Trainer-list
+*   The trainer-list is responsible for displaying the list of caught Pokemon for the logged-in trainer. 
+    It gets the collected pokemon details from the localStorage and fetches their complete details from sessionStorage. The 
+    trainer-list also has functionality to remove unwanted pokemon.
+*/
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Pokemon } from 'src/app/models/pokemon';

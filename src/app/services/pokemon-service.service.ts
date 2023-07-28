@@ -1,3 +1,7 @@
+/*  Pokemon-service
+*   The pokemon-service is responsible for making HTTP requests to the Pokemon API and retrieving pokemon data. 
+*/
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Pokemon } from '../models/pokemon';

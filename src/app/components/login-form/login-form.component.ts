@@ -1,3 +1,9 @@
+/*  LoginForm
+*   The LoginForm handles where users can enter their username to access the pokemon catalogue and their collected pokemon. 
+    The LoginForm handles the login functionality by talking to the user-service to check if the user exists, 
+    it creates a new user if necessary, and then stores the user data in local storage for it to be later accessed.
+*/
+
 import { Component } from "@angular/core";
 import { NgModel } from "@angular/forms";
 import { Router } from "@angular/router";

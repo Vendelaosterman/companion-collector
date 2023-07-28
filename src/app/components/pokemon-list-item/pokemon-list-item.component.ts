@@ -1,3 +1,7 @@
+/*  Pokemon-list-item
+*   The pokemon-list-item is a child-component to the pokemon-list to represent a single pokemon in the list of all pokemon.
+*/
+
 import { Component, Input,Output, OnInit, EventEmitter } from '@angular/core';
 import { Pokemon } from 'src/app/models/pokemon';
 

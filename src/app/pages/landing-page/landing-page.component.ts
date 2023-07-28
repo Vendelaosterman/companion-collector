@@ -1,3 +1,8 @@
+/*  Landing-page   
+*   The landing-page is responsible for displaying the landing page, ie the login page. 
+    It directs the user to the pokemon-catalogue page if they are already logged in.
+*/  
+
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Router } from "@angular/router";
 

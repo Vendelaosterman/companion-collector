@@ -1,3 +1,7 @@
+/* Pokemon
+*  The pokemon file contains interfaces that provide a way to define the properties of the pokemon objects
+*/
+
 export interface Pokemon {
   id: number
   name: string

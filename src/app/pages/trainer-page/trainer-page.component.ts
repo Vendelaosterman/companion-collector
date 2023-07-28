@@ -1,3 +1,8 @@
+/*  Trainer-page 
+*   The trainer-page is responsible for displaying the trainers page where the logged in trainer can see all their collected
+    pokemon. It also stores the functionality to be able to log out of the application.
+*/  
+
 import { Component } from '@angular/core';
 import { UserService } from 'src/app/services/user-service.service'; 
 import { Router } from "@angular/router";

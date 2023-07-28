@@ -1,3 +1,7 @@
+/*  User-service
+*   The user-service is responsible for making HTTP requests to the user API and retrieving the users data. 
+*/
+
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import {User2} from '../models/user';

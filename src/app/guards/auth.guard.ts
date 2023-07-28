@@ -1,3 +1,9 @@
+/*  AuthGuard 
+*   The auth.guard is responsible for preventing unauthenticated users from accessing the pokemon catalogue and the trainers 
+    profiles. If a user is not logged in and tries to access the pokemon catalogue they will be redirected to the login page.  
+*/  
+
+
 import { Injectable, inject } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivateFn, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
